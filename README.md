@@ -1,6 +1,6 @@
 # HubSpot CRM MCP Starter Kit — Manage HubSpot with AI
 
-> **This is a recipe repo.** The Synter MCP server itself lives at [Synter-Media-AI/mcp-server](https://github.com/Synter-Media-AI/mcp-server): 19 ad platforms, campaign creation on 14, one-click install in Cursor, Claude, ChatGPT, and VS Code. Issues, releases, and ⭐ go there.
+> **This is a recipe repo.** The Synter MCP server itself lives at [Synter-Media-AI/mcp-server](https://github.com/Synter-Media-AI/mcp-server): create, launch, and optimize campaigns across the major ad platforms, with one-click install in Cursor, Claude, ChatGPT, and VS Code. Issues, releases, and ⭐ go there.
 
 
 [![MCP Compatible](https://img.shields.io/badge/MCP-compatible-blue)](https://modelcontextprotocol.io)
@@ -8,6 +8,29 @@
 [![Platform: HubSpot](https://img.shields.io/badge/Platform-HubSpot-FF7A59)](https://www.hubspot.com)
 
 **Bridge your CRM and ad campaigns with AI.** Open this repo in Amp, Cursor, or VS Code and manage HubSpot contacts, deals, and lists with AI — then sync your best customers to ad platforms for lookalike targeting.
+
+---
+
+## Install
+
+[![Add to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en/install-mcp?name=synter-ads&config=eyJ1cmwiOiJodHRwczovL21jcC5zeW50ZXJhaS5jb20ifQ==)
+[![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Synter-0098FF?logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=synter-ads&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.synterai.com%22%7D)
+
+- **Cursor / VS Code:** click a button above, or open this repo — it ships `.cursor/mcp.json` and `.vscode/mcp.json`.
+- **Claude Code:** this repo ships `.mcp.json`; or run:
+  ```bash
+  claude mcp add --transport http synter-ads https://mcp.synterai.com
+  ```
+- **Codex:**
+  ```bash
+  codex mcp add synter-ads --url https://mcp.synterai.com
+  codex mcp login synter-ads
+  ```
+- **Claude Desktop:** copy `claude_desktop_config.json` into your Claude config directory (macOS: `~/Library/Application Support/Claude/`, Windows: `%APPDATA%\Claude\`) and replace the placeholder API key.
+
+Your client opens Synter sign-in in the browser (OAuth). New here? Create an account at https://synterai.com/sign-up. Headless/CI fallback: send `X-Synter-Key` with a key from https://synterai.com/developer.
+
+The MCP server itself: https://github.com/Synter-Media-AI/mcp-server
 
 ---
 
@@ -20,27 +43,6 @@ This data is gold for advertising. Your best customers aren't just a CRM record 
 An AI agent automates this pipeline. It queries HubSpot for high-value segments, formats the data for each platform's requirements, and syncs audiences — turning your CRM into an always-fresh ad targeting engine.
 
 **Best for:** Inbound marketing teams, SMBs using HubSpot CRM, B2B companies wanting to sync deals/contacts to ad audiences, teams who need to suppress existing customers from acquisition campaigns.
-
----
-
-## Quick Start (30 Seconds)
-
-### Amp / Cursor / VS Code (Copilot)
-
-1. **Get a free API key** at [syntermedia.ai/developer](https://syntermedia.ai/developer)
-2. **Set the key:**
-   ```bash
-   export SYNTER_API_KEY=syn_your_key_here
-   ```
-3. **Open this repo** in your editor
-4. **Start chatting** — MCP tools are pre-configured in `.mcp.json`
-
-### Claude Desktop
-
-Copy `claude_desktop_config.json` to your Claude config directory and replace the API key:
-
-- **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
-- **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
 
 ---
 
@@ -229,4 +231,4 @@ First-party CRM data is the highest-quality targeting signal. Lookalike audience
 
 MIT — see [LICENSE](LICENSE) for details.
 
-Built by [Synter](https://syntermedia.ai) · [Get API Key](https://syntermedia.ai/developer) · [Documentation](https://syntermedia.ai/docs)
+Built by [Synter](https://synterai.com) · [Get API Key](https://synterai.com/developer) · [Documentation](https://synterai.com/docs)
